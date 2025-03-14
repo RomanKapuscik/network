@@ -6,6 +6,7 @@
 
 """
 import scapy.all as scapy
+from my_local_subnet import find_local_subnet
 
 def scan(ip: str):
     arp_request = scapy.ARP(pdst=ip)
@@ -24,4 +25,4 @@ def scan(ip: str):
     return devices
 
 # devices = scan('192.168.0.1/24')
-# print(devices)
+devices = scan(find_local_subnet())
