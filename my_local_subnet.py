@@ -30,4 +30,5 @@ def find_local_subnet() -> str:
     return short_ip + '.1/24'
 
 
-print('Local subnet: ' + find_local_subnet())
+if __name__ == '__main__':
+    print('Local subnet: ' + find_local_subnet())

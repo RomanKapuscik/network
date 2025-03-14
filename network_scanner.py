@@ -24,5 +24,5 @@ def scan(ip: str):
         devices.append(device)
     return devices
 
-# devices = scan('192.168.0.1/24')
-devices = scan(find_local_subnet())
+if __name__ == '__main__':
+    devices = scan(find_local_subnet())
